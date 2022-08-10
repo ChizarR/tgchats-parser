@@ -2,7 +2,7 @@ from tg_types import TelegramChatData
 
 from bs4 import BeautifulSoup
 
-def parse_json(response):
+def parse_combot(response):
     chats = []
     for chat in response:
         chat_name = chat["t"]
@@ -13,7 +13,7 @@ def parse_json(response):
     return chats
 
 
-def parse_html(pages):
+def parse_tgram(pages):
     chats = []
     counter = 0
     for page in pages:

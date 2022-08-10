@@ -1,8 +1,8 @@
 import csv
 
 
-def write_to_csv(data):
-    with open("tg_chats.csv", "w", encoding="utf-8") as file:
+def write_to_csv(data, file_name="chats"):
+    with open(f"{file_name}.csv", "w", encoding="utf-8") as file:
         headers = ["ID", "CHAT_NAME", "LINK", "LANG"]
         writer = csv.writer(file)
         writer.writerow(headers)
